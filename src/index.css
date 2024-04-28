@@ -1,0 +1,11 @@
+
+
+  body {
+    font-family: 'IRANSansWeb', sans-serif;
+  }
+
+  @font-face {
+    font-family: 'IRANSansWeb';
+    src: url('./assets/fonts/IRANSansWeb.woff2') format('woff2'),
+         url('./assets/fonts/IRANSansWeb.woff') format('woff');
+  }
