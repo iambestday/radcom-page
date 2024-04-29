@@ -12,6 +12,7 @@ function App() {
       <div className="container">
         {data.map((item, index) => (
           <div key={index} className="items">
+            <div className="overlay-rectangle-left"/>
             <img
               src={
                 item.image === "windows"
@@ -24,10 +25,12 @@ function App() {
             />
             <h2>{item.title}</h2>
             <p className="description">{item.description}</p>
-            <button><div>
+            <button>
+              <div>
               {item.buttonText}</div>
               <img src={arrow} alt={"arrow"} />
             </button>
+            <div className="overlay-rectangle-right"/>
           </div>
         ))}
       </div>
