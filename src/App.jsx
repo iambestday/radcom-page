@@ -1,6 +1,6 @@
 import "./App.scss";
 import data from "./lib/data.json";
-import { windows, wordpress, domain } from "./lib";
+import { windows, wordpress, domain, arrow } from "./lib";
 
 function App() {
   return (
@@ -11,8 +11,7 @@ function App() {
       </header>
       <div className="container">
         {data.map((item, index) => (
-          <div key={index} className="div-with-border">
-            <h2>{item.title}</h2>
+          <div key={index} className="items">
             <img
               src={
                 item.image === "windows"
@@ -23,8 +22,12 @@ function App() {
               }
               alt={item.alt}
             />
-            <p>{item.description}</p>
-            <button>{item.buttonText}</button>
+            <h2>{item.title}</h2>
+            <p className="description">{item.description}</p>
+            <button><div>
+              {item.buttonText}</div>
+              <img src={arrow} alt={"arrow"} />
+            </button>
           </div>
         ))}
       </div>
